@@ -1,6 +1,6 @@
 # dsc232r-amazon-predictive-modeling
 
-Download the dataset and save it in the folder named amazon_data：
+Download the dataset and save unzipped files in a folder named 'amazon_data':
 https://www.kaggle.com/datasets/cynthiarempel/amazon-us-customer-reviews-dataset
 
 In processing our dataset, proper data preparation is crucial to ensure the quality and effectiveness of our analysis. Here are the specific steps we have taken:
