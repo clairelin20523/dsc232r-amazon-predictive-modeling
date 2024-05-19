@@ -37,3 +37,13 @@ In the initial data modeling phase, the training set consists of data from the y
 To forecast the 2015 purchases of products in category 32, the ARIMA (AutoRegressive Integrated Moving Average) model is utilized. It analyzes the span of 12 months in the year 2014 to predict the purchases in 2015. The ARIMA model endeavors to predict future values—in this case, purchases—by discerning patterns and relationships from previous data.
 
 The subsequent model will expand upon the current one, possibly incorporating the usage of word2vector data to identify popular buzzwords indicating an influx in popularity.
+
+### Answer the questions
+* Where does your model fit in the fitting graph? and What are the next models you are thinking of and why?
+
+Based on the ARIMA model for product_category_num 32 of the year 2014, we forcasted the estimate of sales (with assumption based on reviews). The next models will include more training data, prior to 2014 for all product catgeories. We may possibily utilize the word2vector data to see the primary key words that have the highest count of reviews which we assume correlates to high counts of purchases. Through this we can forcast what speciifc item or product_category_num will increase in sales. However before moving on to more complicated models, our team will focus on building upon the ARIMA model to more acurately forcast which product_category_num is rise in sales/popular as the forcasted and test data concluded with a RMSE of 28498.15662477966.
+
+### Conclusion section
+* What is the conclusion of your 1st model? What can be done to possibly improve it?
+  
+The 1st model concluded with an RMSE of 28498.156. This isn't the best given that there is almost a difference of 30k of the forcsted and the actualy 2015 test data for the product_category_num 32. We can increase the training data from 2014 to the range of 2010 to 2014. We do this for all the product_category_num to be able to accurately predict which item is more popular.  By increasing the training data we will be able to catch more underlying patterns thorughout the years. 
