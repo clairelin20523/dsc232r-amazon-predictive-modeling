@@ -27,3 +27,10 @@ We will standardize or normalize numerical features, especially when using dista
 Data will be split into training and testing sets according to the time order, with the most recent data used as the test set. This setup simulates real-world predictions of product trends, ensuring that the model performs well on unseen data.
 
 Through these meticulous data preprocessing steps, our dataset will be cleaner, more effective, and ready to build an accurate predictive model.
+
+### Data Modeling 
+In the initial data modeling phase, the training set consists of data from the year 2014, while the test set comprises data from the year 2015. Upon plotting all the product review counts as a reference to verified product purchases, it is observed that product_category_num 32 registers the highest number of purchases throughout the year. Although the upcoming model will be designed to handle multiple categories over multiple years, the initial focus of the data modeling phase is on a single category over a single year to assess the accuracy and adaptability of the model.
+
+To forecast the 2015 purchases of products in category 32, the ARIMA (AutoRegressive Integrated Moving Average) model is utilized. It analyzes the span of 12 months in the year 2014 to predict the purchases in 2015. The ARIMA model endeavors to predict future values—in this case, purchases—by discerning patterns and relationships from previous data.
+
+The subsequent model will expand upon the current one, possibly incorporating the usage of word2vector data to identify popular buzzwords indicating an influx in popularity.
