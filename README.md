@@ -37,6 +37,11 @@ To forecast the 2015 purchases of products in category 32, we utilized the ARIMA
 
 The subsequent model will build upon the current one, potentially incorporating the use of word2vec data to identify popular buzzwords, which could indicate trends in product popularity.
 
+### Evaluation
+In this section, we calculated the Test RMSE and compared the forecast with the testing data and training forecast in the graph. I have written the code for the fitting graph in the milestone3.ipynb file.
+
+However, due to the large size of the dataset, the process is very slow, and the queue time on the server is too long. As a result, we were unable to complete the final part of our code on SDSC. Therefore, I have uploaded a file named milestone3_local on GitHub, which processes a small portion of our dataset and uses this subset to generate the fitting graph. This is mainly to demonstrate that our code works correctly.
+
 ### Answer the questions
 * Where does your model fit in the fitting graph? and What are the next models you are thinking of and why?
 
