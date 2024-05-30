@@ -28,20 +28,20 @@ Data will be split into training and testing sets according to the time order, w
 
 Through these meticulous data preprocessing steps, our dataset will be cleaner, more effective, and ready to build an accurate predictive model.
 
-#Introduction
+# Introduction
 As our world advances, more activities can be done online through websites, leading many large companies to evolve and dominate various industries. For example, fewer people are going out to watch movies, opting to use services like Netflix instead. E-commerce has also seen a significant rise in popularity in recent years. Large e-commerce companies have been steadily dominating the industry, with platforms like eBay having a long-standing presence and others, such as Etsy, gaining increasing popularity. Additionally, major companies like Best Buy and Walmart are expanding their online presence. Most notably, Amazon is a household name in e-commerce.
 
 By leveraging big data, businesses aim to better grasp customer insights, potentially increasing sales and demand. To achieve this, businesses can use predictive modeling to forecast upcoming trends. These models use historical data to anticipate shifts in consumer preferences, identify popular products, and give businesses a competitive advantage.
 
 In this study, we use historical Amazon data to build two models for predicting trends. Our aim is to develop predictive models that forecast product popularity based on historical sales and word embeddings. This research not only advances predictive analytics but also sheds light on consumer preferences and market dynamics, helping businesses stay ahead in the competitive e-commerce landscape.
-#Figures
-#Methods
-##Data Exploration
-###Get Total Number of Observations
-##Preprocessing
-##Model 1
-##Model 2
-#Results
+# Figures
+# Methods
+## Data Exploration
+### Get Total Number of Observations
+## Preprocessing
+## Model 1
+## Model 2
+# Results
 ##Data Exploration
 ##Preprocessing
 ##Model 1
