@@ -7,27 +7,27 @@ In this study, we use historical Amazon data to build two models for predicting 
 # 2. Figures
 # 3. Methods
 ## 3.1 Data Exploration
-### Get Total Number of Observations
+### 3.1.1 Get Total Number of Observations
 ```df.count()```
-### Get Columns
+### 3.1.2 Get Columns
 ```df.columns```
-### Get Number of Columns
+### 3.1.3 Get Number of Columns
 ```len(columns)```
-### Get Number of Missing Values for Each Column
+### 3.1.4 Get Number of Missing Values for Each Column
 For each column i```df.filter(df[columns[i]].isNull()).count()```
-### Look at Column Types
+### 3.1.5 Look at Column Types
 ```df.dtypes```
-### Show Column Distributions
+### 3.1.6 Show Column Distributions
 ```df.describe().show()```
-### Check for Duplicates
+### 3.1.7 Check for Duplicates
 ```df.groupBy(columns).count().where('count > 1')```
-### Simple Plot Methods on Columns
+### 3.1.8 Simple Plot Methods on Columns
 * Histogram
 * Piechart
 * Barplot
 * Boxplot
 * Boxplot with no Outliers
-### Simple Visualizations
+### 3.1.9 Simple Visualizations
 * Column `helpful_votes`
 * Column `star_rating`
 * Column `product_category`
@@ -38,15 +38,15 @@ Method that allows users to choose a certain year to look at monthly purchasing 
 ## 3.4 Model 2
 # 4. Results
 ## 4.1 Data Exploration
-### Get Total Number of Observations
+### 4.1.1 Get Total Number of Observations
 There is a total of 149086 observations
-### Get Columns
+### 4.1.2 Get Columns
 Columns:
 ['marketplace', 'customer_id', 'review_id', 'product_id', 'product_parent', 'product_title', 'product_category', 'star_rating', 'helpful_votes', 'total_votes', 'vine', 'verified_purchase', 'review_headline', 'review_body', 'review_date']
-### Get Number of Columns
+### 4.1.3 Get Number of Columns
 There is a total of 15 columns
-### Get Number of Missing Values for Each Column
-### Look at Column Types
+### 4.1.4 Get Number of Missing Values for Each Column
+### 4.1.5 Look at Column Types
 'marketplace' column is of type 'string'
 'customer_id' column is of type 'int'
 'review_id' column is of type 'string'
@@ -62,9 +62,9 @@ There is a total of 15 columns
 'review_headline' column is of type 'string'
 'review_body' column is of type 'string'
 'review_date' column is of type 'timestamp'
-### Show Column Distributions
-### Check for Duplicates
-### Simple Visualizations
+### 4.1.6 Show Column Distributions
+### 4.1.7 Check for Duplicates
+### 4.1.8 Simple Visualizations
 #### Column `helpful_votes`
 ##### Histogram
 * There are clearly noticeable high outliers, which conceal the visibility of the distribution
