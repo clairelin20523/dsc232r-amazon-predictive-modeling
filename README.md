@@ -6,7 +6,7 @@ By leveraging big data, businesses aim to better grasp customer insights, potent
 In this study, we use historical Amazon data to build two models for predicting trends. Our aim is to develop predictive models that forecast product popularity based on historical sales and word embeddings. This research not only advances predictive analytics but also sheds light on consumer preferences and market dynamics, helping businesses stay ahead in the competitive e-commerce landscape.
 # 2. Figures
 # 3. Methods
-## Data Exploration
+## 3.1 Data Exploration
 ### Get Total Number of Observations
 ```df.count()```
 ### Get Columns
@@ -33,11 +33,11 @@ For each column i```df.filter(df[columns[i]].isNull()).count()```
 * Column `product_category`
 * Yearly Purchase Counts
 Method that allows users to choose a certain year to look at monthly purchasing counts
-## Preprocessing
-## Model 1
-## Model 2
+## 3.2 Preprocessing
+## 3.3 Model 1
+## 3.4 Model 2
 # 4. Results
-## Data Exploration
+## 4.1 Data Exploration
 ### Get Total Number of Observations
 There is a total of 149086 observations
 ### Get Columns
@@ -79,9 +79,9 @@ There is a total of 15 columns
 #### Column `product_category`
 * Look at category distribution through pie chart
 #### Yearly Purchase Counts
-## Preprocessing
-## Model 1
-## Model 2
+## 4.2 Preprocessing
+## 4.3 Model 1
+## 4.4 Model 2
 # 5. Discussion
 This is where you will discuss the why, and your interpretation and your though process from beginning to end. This will mimic the sections you have created in your methods section as well as new sections you feel you need to create. You can also discuss how believable your results are at each step. You can discuss any short comings. It's ok to criticize as this shows your intellectual merit, as to how you are thinking about things scientifically and how you are able to correctly scrutinize things and find short comings. In science we never really find the perfect solution, especially since we know something will probably come up int he future (i.e. donkeys) and mess everything up. If you do it's probably a unicorn or the data and model you chose are just perfect for each other!
 # 6. onclusion
