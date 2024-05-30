@@ -34,6 +34,18 @@ For each column i```df.filter(df[columns[i]].isNull()).count()```
 * Yearly Purchase Counts
 Method that allows users to choose a certain year to look at monthly purchasing counts
 ## 3.2 Preprocessing
+### 3.2.1 Take care of missing categories
+### 3.2.2 Remove Columns
+### 3.2.3 Filter out rows with missing body and date and verified purchase
+### 3.2.4 Filter out old data
+### 3.2.5 Check other missing values
+### 3.2.6 Extract month and year
+### 3.2.7 Add Sub-category Column
+### 3.2.8 Encode Categorical Columns
+#### 3.2.8.1 Change title into vectors
+#### 3.2.8.1 Change text into vectors
+### 3.2.9 Dataset Splitting
+### 3.2.10 Count Product Reviews Per Day
 ## 3.3 Model 1
 ## 3.4 Model 2
 # 4. Results
@@ -64,7 +76,8 @@ There is a total of 15 columns
 'review_date' column is of type 'timestamp'
 ### 4.1.6 Show Column Distributions
 ### 4.1.7 Check for Duplicates
-### 4.1.8 Simple Visualizations
+### 4.1.8 Simple Plot Methods on Columns
+### 4.1.9 Simple Visualizations
 #### Column `helpful_votes`
 ##### Histogram
 * There are clearly noticeable high outliers, which conceal the visibility of the distribution
@@ -80,6 +93,18 @@ There is a total of 15 columns
 * Look at category distribution through pie chart
 #### Yearly Purchase Counts
 ## 4.2 Preprocessing
+### 4.2.1 Take care of missing categories
+### 4.2.2 Remove Columns
+### 4.2.3 Filter out rows with missing body and date and verified purchase
+### 4.2.4 Filter out old data
+### 4.2.5 Check other missing values
+### 4.2.6 Extract month and year
+### 4.2.7 Add Sub-category Column
+### 4.2.8 Encode Categorical Columns
+#### 4.2.8.1 Change title into vectors
+#### 4.2.8.1 Change text into vectors
+### 4.2.9 Dataset Splitting
+### 4.2.10 Count Product Reviews Per Day
 ## 4.3 Model 1
 ## 4.4 Model 2
 # 5. Discussion
@@ -94,6 +119,3 @@ This is where you do a mind dump on your opinions and possible future directions
 * Timothy Indrieri
 # 8. Final Model and Final Results Summary
 Include this in the last paragraph in D.
-
-
-
