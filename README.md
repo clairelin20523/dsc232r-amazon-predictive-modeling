@@ -35,9 +35,13 @@ For each column i```df.filter(df[columns[i]].isNull()).count()```
 Method that allows users to choose a certain year to look at monthly purchasing counts
 ## 3.2 Preprocessing
 ### 3.2.1 Take care of missing categories
+For missing values in the `product_category` field, since adjacent entries usually belong to the same category, we will employ a forward-fill method to maintain data continuity.
 ### 3.2.2 Remove Columns
+Given the low proportion of Vine program reviews (only 2,982 out of 523,269), which is too minor to significantly impact our analysis, we have decided to drop this column. Similarly, since all data comes from the US market (the `marketplace` column is always 'US'), this column is redundant and will be removed to save storage space and computational resources.
 ### 3.2.3 Filter out rows with missing body and date and verified purchase
+For the essential fields `review_body` and `review_date`, which are critical for our analysis due to their relevance to the review content and timing, we will remove any rows with missing values in these columns. The absence of this information renders the row useless for trend analysis.
 ### 3.2.4 Filter out old data
+Observing that the volume of data increases over the years, likely reflecting the growing base of Amazon users, we will discard data from before 2005. This approach focuses the model training on more representative and relevant data, enhancing the accuracy of predicting future trends.
 ### 3.2.5 Check other missing values
 ### 3.2.6 Extract month and year
 ### 3.2.7 Add Sub-category Column
@@ -45,6 +49,7 @@ Method that allows users to choose a certain year to look at monthly purchasing 
 #### 3.2.8.1 Change title into vectors
 #### 3.2.8.1 Change text into vectors
 ### 3.2.9 Dataset Splitting
+Data will be split into training and testing sets according to the time order, with the most recent data used as the test set. This setup simulates real-world predictions of product trends, ensuring that the model performs well on unseen data.
 ### 3.2.10 Count Product Reviews Per Day
 ## 3.3 Model 1
 ## 3.4 Model 2
