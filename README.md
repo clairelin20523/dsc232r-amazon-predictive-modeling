@@ -25,5 +25,3 @@ We will standardize or normalize numerical features, especially when using dista
 
 ### Dataset Splitting
 Data will be split into training and testing sets according to the time order, with the most recent data used as the test set. This setup simulates real-world predictions of product trends, ensuring that the model performs well on unseen data.
-
-Through these meticulous data preprocessing steps, our dataset will be cleaner, more effective, and ready to build an accurate predictive model.
