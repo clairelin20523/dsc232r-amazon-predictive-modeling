@@ -1,3 +1,18 @@
+### Get Total Number of Observations
+```df.count()```
+### Get Columns
+```df.columns```
+### Get Number of Columns
+```len(columns)```
+### Get Number of Missing Values for Each Column
+```​​for i in range(num_cols):
+    missing = df.filter(df[columns[i]].isNull()).count()
+    print("'%s' column has %d missing values" % (columns[i], missing))```
+### Look at Column Types
+```data_types = df.dtypes
+for i in range(num_cols):
+    print("'%s' column is of type '%s'" % (data_types[i][0], data_types[i][1]))```
+
 # dsc232r-amazon-predictive-modeling
 
 Download the dataset and save unzipped files in a folder named 'amazon_data':
