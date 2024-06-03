@@ -27,3 +27,13 @@ We will standardize or normalize numerical features, especially when using dista
 Data will be split into training and testing sets according to the time order, with the most recent data used as the test set. This setup simulates real-world predictions of product trends, ensuring that the model performs well on unseen data.
 
 Through these meticulous data preprocessing steps, our dataset will be cleaner, more effective, and ready to build an accurate predictive model.
+
+### Describing Labels, Class and Target for the Model
+
+We are using the ARIMA model we are using product_category for Labels we are trying to forecast the number of reviews in the future.
+Class we are using the subcategories of the product_category meaning that we are trying to see the forecast for the sub-category to understand the future trend of reviews.
+In the subcategories we created ('Home Essentials', 'Outdoor Living','Media','Digital Media','Electronics','Apparel and Accessories','Personal Care','Entertainment and Leisure', 'Family and Living') This will help to condense the data and be able to show the results more effectively.
+Target we are looking for the forecasted values of the number of reviews for each subcategory.
+
+
+
