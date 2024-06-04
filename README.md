@@ -28,6 +28,23 @@ Data will be split into training and testing sets according to the time order, w
 
 Through these meticulous data preprocessing steps, our dataset will be cleaner, more effective, and ready to build an accurate predictive model.
 
+### Descriing columns
+1. **marketplace**: The country or region where the product review was submitted.
+2. **customer_id**: A unique identifier for the customer who submitted the review.
+3. **review_id**: A unique identifier for the review.
+4. **product_id**: A unique identifier for the product being reviewed.
+5. **product_parent**: A unique identifier for the parent product group to which the product belongs.
+6. **product_title**: The title or name of the product.
+7. **product_category**: The category or type of product.
+8. **star_rating**: The rating given by the customer, typically on a scale of 1 to 5 stars.
+9. **helpful_votes**: The number of votes indicating how many customers found the review helpful.
+10. **total_votes**: The total number of votes the review received (both helpful and unhelpful).
+11. **vine**: Indicates whether the review was part of the Vine program (a program where reviewers receive free products in exchange for their reviews).
+12. **verified_purchase**: Indicates whether the review was written by a customer who purchased the product on the marketplace.
+13. **review_headline**: The headline or title of the review.
+14. **review_body**: The full text of the review.
+15. **review_date**: The date the review was submitted.
+
 ### Describing Labels, Class and Target for the Model
 
 We are using the ARIMA model we are using product_category for Labels we are trying to forecast the number of reviews in the future.
