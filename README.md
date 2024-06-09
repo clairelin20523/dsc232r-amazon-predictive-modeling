@@ -90,17 +90,7 @@ In addition to the ARIMA model, which forecasts trends for upcoming months based
 
 The following variables are used: product_ category (categorical), helpful_votes, total_votes, and headline_sentiment (numerical). The logistical regression model has two parameters, the featuresCol, and the labelCol “features”. For the features variable “features” which contains the combined feature vector for each row in df ( one-hot encoded vector for categorical variables) and values of each numerical variable. The features column makes predictions about whether an item has a high rating indicating future popularity.
 
-The results are as follows, with 80/20 training and testing, and using the BinaryClassificationEvaluator (labelCol = ‘high_rating’), we got an average of approximately 0.73. This is how accurate the linear regression prediction model is when it comes to predicting whether a product will be popular based on reviews
-
-Insert chart
- Accuracy: 0.7233722543820628
-+-----------+----------+--------------------+
-|high_rating|prediction|         probability|
-+-----------+----------+--------------------+
-|          1|       1.0|[0.08732637911517...|
-|          1|       1.0|[0.08732637911517...|
-…
-
+The results are as follows, with 80/20 training and testing, and using the BinaryClassificationEvaluator (labelCol = ‘high_rating’), we got an average of approximately 0.73. This is how accurate the linear regression prediction model is when it comes to predicting whether a product will be popular based on reviews.
 
 # 4. Results
 ## 4.1 Data Exploration
@@ -242,10 +232,10 @@ The 1st model concluded with an RMSE of 28498.156. This isn't the best given tha
 The next models we are thinking of are Linear Regression and SVM. Linear regression shows which popular products based on star rating will increase the number of reviews. This can also help us to see which model would be better to forecast ARIMA or Linear regression. Support Vector Machines (SVM) can assist in understanding which products are most influential in generating reviews through their ability to classify and predict based on labeled data. SVM can classify products based on their attributes (e.g., star ratings, review counts) into categories such as "highly influential," "moderately influential," and "less influential." This classification can be based on historical data that includes product attributes and review counts.
 
 ## Model 2
-* What is the conclusion of your 2nd model?
+What is the conclusion of your 2nd model?
 Overall, our logistic regression model demonstrates a good fit in the fitting graph, and considering other models could potentially further enhance our predictive capabilities. The accuracy and AUC scores on both the training and testing datasets are approximately 0.72, indicating a moderately good performance. Additionally, the ROC AUC score of 0.72 suggests that there is a 72% chance that the model will rank a randomly chosen positive instance higher than a randomly chosen negative one. While this score is moderate, it demonstrates that the model has some discriminative power, making it suitable for our task.
 
-* What can be done to possibly improve it?
+What can be done to possibly improve it?
 It would benefit us to include sentiment for the text body as well. However, we fail to do so due to the large memory it takes.
 
 We could investigate why the `helpful_votes` column decreased the accuracy score when used as a predictor with `product_category` but decreased the accuracy when we took it out completely. Maybe there is some multicollinearity between columns that we can investigate.
