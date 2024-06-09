@@ -7,16 +7,19 @@ In this study, we use historical Amazon data to build two models for predicting 
 
 # 2. Figures with Media Subcategory
 ## 2.1 All subcategory trends
+
 <img width="553" alt="1" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/d9b47367-7e60-4593-a327-584d0673940b">
 
 Our main model of interest would be to forecast sale counts for a subcategory of interest, here we look at yearly subcategory sales. We see an increasing trend for all subcategories except for digital media which dropped from 2013 to 2014. The highest subcategory count is for electronics. Outdoor living and home essentials have less sales count but still show an increasing trend.
 
 ## 2.2 Media subcategory trend
+
 <img width="567" alt="2" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/e72e990a-bae8-4590-8f38-12f116c76b2b">
 
 We will use the media subcategory as a lasting example in our report, here we have a plot showing the yearly counts for the media subcategory.
 
 ## 2.3 Media subcategory category trends
+
 <img width="571" alt="3" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/098ad57d-7335-4aec-82ae-23256c2a9b1b">
 
 Within the media subcategory, we plot the individual categories and look at the trends. Music seems to have the highest sales count while video lowest and barely increasing.
@@ -132,24 +135,29 @@ There is a total of 15 columns
 #### Column `helpful_votes`
 ##### Histogram
 * There are clearly noticeable high outliers
+
 <img width="513" alt="5" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/7461c787-8942-45e2-aa3c-c40edb357f10">
 
 ##### Boxplot
 * Indeed we see many high outliers
 * The boxplot is heavily skewed
+
 <img width="524" alt="6" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/6d80f9dc-3ff8-48d3-a01f-8a0fb8efedca">
 
 #### Column `star_rating`
 * Majority of ratings given are 5 stars
 * Second most given rating is 1 but still much less than 5
 * Increased ratings from 2 to 5 stars
+
 <img width="539" alt="7" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/622b50dc-ff57-42ea-8630-49e86eb1720f">
 
 #### Column `product_category`
 *  Look at category distribution through the bar plot
+
 <img width="541" alt="8" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/95d99b95-42be-4deb-9463-1f11ff6d092b">
 
 #### Yearly Purchase Overview
+
 <img width="545" alt="9" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/c908f955-4ab4-4af0-9e0f-2fa021ea211f">
 
 <img width="562" alt="10" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/200b76b5-d988-48a1-9fea-cc24ac0f06c4">
@@ -171,22 +179,26 @@ There is a total of 15 columns
 ### 4.2.10 Count Product Reviews Per Day
 ## 4.3 Model 1With Media Subcategory
 ### 4.3.1 ACF
+
 <img width="561" alt="12" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/747cfadb-3794-4f8a-8c77-cd2cd55e8d0f">
 
 The Autocorrelation Function (ACF) is a parameter for the ARIMA model. This parameter shows how correlated the values in a time series are with the original series. The ACF then plots the correlation coefficient against the lag. If we are looking at the graph above statistically speaking we should be using a lag of 4 since this seems to have higher significance in terms of the correlation coefficient which means that going back 4 lags will help our model be able to predict better. 
 
 ### 4.3.2 PACF
+
 <img width="571" alt="13" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/a99c35a5-f88c-4b1d-9cb5-6b42bad5714a">
 
 The Partial Autocorrelation Function (PACF) is also a parameter of the ARIMA model. The PACF is used to understand the direct value between the past and the current values of a time series.
 Unlike ACF which looks at all past values to come up with the correlation, PACF filters out middle values to compare the current value with the value it is currently evaluating to understand the correlation. In the graph above we see that a 1 lag would be the best value to use for the model.
 
 ### 4.3.4 Forecast
+
 <img width="585" alt="14" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/f6861ff5-afae-4875-94e2-bffb3447358d">
 
 Based on the ARIMA model for subcategory media of the year 2014, we forecasted the number of reviews. Using the ARIMA model we saw that the prediction was off from the actual data with an RMSE of 28498.15662477966. In the next phase the enhancement of the ARIMA model to add ACF and PACF. ACF autocorrelation function (ACF) helps identify the correlation between observations at different lags (dates) indicating the presence of patterns such as seasonality. The partial autocorrelation function (PACF) helps determine the extent of correlation between observations while controlling for the influence of previous lags (dates), aiding in identifying the appropriate order of the autoregressive terms. Using the ACF and PACF parameters will be verified against the RMSE to get less error on the forecast. Further improvements of the ARIMA model would be to use the word2vector data to see the primary keywords that have the highest count of reviews which we can see which products have similar trends in words that correlate to the review number.
 
 ### 4.3.5 Evaluation
+
 <img width="605" alt="15" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/e8900d81-09bc-4725-9257-4589c0334b81">
 
 We see by this chart the forecast in red is the predicted reviews count for the Media data. The blue is our real data. Based on the ARIMA and the parameters from the ACF and PACF we can see our estimation for the values in 2015 for Media review count. This graph shows us that our real data has some fluctuations compared to the test dataset. 
@@ -194,24 +206,34 @@ We see by this chart the forecast in red is the predicted reviews count for the 
 In this section, we calculated the values for Training Forecast, Testing Data, and Forecast across the time series. We also plotted the RMSE values on the training and testing sets as complexity increases. From the graph, it can be observed that the RMSE on the training set increases with rising complexity, but the increase is relatively small compared to that on the testing set. The RMSE on the testing set significantly increases as complexity increases. This suggests that for simple time series models, high complexity is unnecessary.
 
 ### 4.3.6 Fitting graph
+
 <img width="568" alt="16" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/dc8e352e-6a01-4e76-bf76-77da80417008">
 
 
 ### 4.3.7 Fitting graph
 It differs from typical machine learning models, which generally follow a pattern where the error on the testing set first decreases and then increases with rising complexity. The reason may be that increasing the order of differencing might not help improve the model; instead, it could lead to over-differencing and introduce unnecessary noise. Moreover, increasing the AR component (p) means that the model will consider a longer history of data, while an increase in the MA component (q) means that the model will take into account more recent prediction errors. If the time series data contains relatively more noise, too many AR or MA terms might capture this noise rather than the actual signal. Additionally, in ARIMA models, the choice of parameters is extremely sensitive to the model's performance. Inappropriate parameter selection may directly lead to poor model performance, rather than presenting the overfitting phenomenon of initially decreasing and then increasing error as model complexity increases.
+
 <img width="595" alt="17" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/59724314-ce0d-4d31-9873-b643217ef0d4">
 
 
 ## 4.4 Model 2
+
 <img width="585" alt="18" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/bc15ad67-c0ac-4a6f-8ddf-2ced170b22fb">
 
 We examined the confusion matrix for both the training and testing datasets. This analysis provides a clear view of how well the model predicts binary outcomes by showing the number of correct and incorrect predictions.
+
 <img width="576" alt="19" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/69fb36cd-7a3a-44d1-9c39-a597490362d3">
 
 Secondly, the accuracy and AUC scores summarize the model's performance. Higher values of accuracy and AUC on both training and testing datasets indicate better model performance. If the training accuracy is significantly higher than the testing accuracy, it may suggest overfitting. In our case, the accuracy and AUC on both training and testing datasets are quite close to each other, indicating a well-fitted model.
+
 <img width="542" alt="20" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/2d3bad82-83a8-4c7a-815b-17d3cda004cb">
 
-Lastly, the ROC curves for both training and testing datasets illustrate the trade-off between true positive rate (TPR) and false positive rate (FPR). These curves provide insights into the model's ability to distinguish between positive and negative classes.
+The ROC curves for both training and testing datasets illustrate the trade-off between true positive rate (TPR) and false positive rate (FPR). These curves provide insights into the model's ability to distinguish between positive and negative classes.
+
+<img width="996" alt="22" src="https://github.com/clairelin20523/dsc232r-amazon-predictive-modeling/assets/113715664/bb35dc72-41db-45dd-bbee-71100b330b3c">
+
+Lastly, for the fitting plot, the first column used was `product_category`, which shows an accuracy score of about 0.67. It is interesting to see that after adding the second column `helpful_votes`, it decreases the accuracy. However, upon adding other columns `total_votes` and `headline_sentiment`, the accuracy increases to about 0.72. When reaching this conclusion, I thought that columnn `helpful_votes` would be noise, however removing it from the whole model decreased the accuracy. Since we have limited columns to include in our model, our model never actually overfits.
+
 
 # 5. Discussion
 ## Model 1
@@ -220,7 +242,15 @@ The 1st model concluded with an RMSE of 28498.156. This isn't the best given tha
 The next models we are thinking of are Linear Regression and SVM. Linear regression shows which popular products based on star rating will increase the number of reviews. This can also help us to see which model would be better to forecast ARIMA or Linear regression. Support Vector Machines (SVM) can assist in understanding which products are most influential in generating reviews through their ability to classify and predict based on labeled data. SVM can classify products based on their attributes (e.g., star ratings, review counts) into categories such as "highly influential," "moderately influential," and "less influential." This classification can be based on historical data that includes product attributes and review counts.
 
 ## Model 2
-We trained a logistic regression model instead of Linear Regression and SVM. Overall, our model demonstrates a good fit in the fitting graph, and considering other models could potentially further enhance our predictive capabilities. The accuracy and AUC scores on both the training and testing datasets are approximately 0.72, indicating a moderately good performance. Additionally, the ROC AUC score of 0.72 suggests that there is a 72% chance that the model will rank a randomly chosen positive instance higher than a randomly chosen negative one. While this score is moderate, it demonstrates that the model has some discriminative power, making it suitable for our task.
+* What is the conclusion of your 2nd model?
+Overall, our logistic regression model demonstrates a good fit in the fitting graph, and considering other models could potentially further enhance our predictive capabilities. The accuracy and AUC scores on both the training and testing datasets are approximately 0.72, indicating a moderately good performance. Additionally, the ROC AUC score of 0.72 suggests that there is a 72% chance that the model will rank a randomly chosen positive instance higher than a randomly chosen negative one. While this score is moderate, it demonstrates that the model has some discriminative power, making it suitable for our task.
+
+* What can be done to possibly improve it?
+It would benefit us to include sentiment for the text body as well. However, we fail to do so due to the large memory it takes.
+
+We could investigate why the `helpful_votes` column decreased the accuracy score when used as a predictor with `product_category` but decreased the accuracy when we took it out completely. Maybe there is some multicollinearity between columns that we can investigate.
+
+Our `headline_sentiment` is fairly simple due to it being binary and only using a dictionary of words to conclude, improvement in this column could be done such as using a better dictionary or changing it from binary to decimal. Additionally, using a sophisticated library such as nltk would increase the performance, however, we were unable to do so due to technical and hardware issues.
 
 
 # 6. Conclusion
