@@ -114,13 +114,38 @@ There is a total of 15 columns
 ## 4.4 Model 2
 # 5. Discussion
 This is where you will discuss the why, and your interpretation and your though process from beginning to end. This will mimic the sections you have created in your methods section as well as new sections you feel you need to create. You can also discuss how believable your results are at each step. You can discuss any short comings. It's ok to criticize as this shows your intellectual merit, as to how you are thinking about things scientifically and how you are able to correctly scrutinize things and find short comings. In science we never really find the perfect solution, especially since we know something will probably come up int he future (i.e. donkeys) and mess everything up. If you do it's probably a unicorn or the data and model you chose are just perfect for each other!
+
 # 6. Conclusion
-This is where you do a mind dump on your opinions and possible future directions. Basically what you wish you could have done differently. Here you close with final thoughts.
+In this study, we aimed to leverage historical Amazon data to build predictive models for forecasting product popularity. By utilizing the ARIMA model for time series forecasting and the logistic regression model for classification, we have demonstrated the potential of predictive analytics in understanding consumer preferences and market trends. However, there are several reflections and potential future directions that could enhance this research.
+
+While the ARIMA and logistic regression models provided valuable insights, exploring more advanced models such as LSTM (Long Short-Term Memory) networks for time series data or ensemble methods like Random Forests and Gradient Boosting for classification could enhance predictive performance. These models can capture more complex patterns and interactions within the data.
+
+One exciting direction for future research is the development of real-time predictive analytics. Implementing streaming data processing frameworks could enable businesses to make real-time predictions and adapt quickly to changing consumer trends. This could be particularly valuable for dynamic pricing strategies and inventory management. Beyond the technical aspects, integrating predictive models with actual business strategies is crucial. Future research could focus on case studies where businesses successfully leverage these models to improve decision-making processes, customer satisfaction, and overall profitability.
+
+Our study highlights the potential of predictive modeling in e-commerce, particularly in understanding and forecasting product popularity. While our models demonstrated moderate success, there is significant room for improvement and expansion. By addressing the limitations and exploring more advanced techniques, future research can further enhance the predictive capabilities and provide deeper insights into consumer behavior.
+
+
 # 7. Statement of Collaboration
-* Claire Lin
-* Jingyi (Alina) Zhou
-* Rongrong (Cassy) Xu
-* Sol Jung
-* Timothy Indrieri
+* Claire Lin: Worked on abstract draft 2, data preprocessing, data exploration, organizing notebooks, and the final report, and had Zoom calls with multiple team members.
+* Jingyi (Alina) Zhou: Worked on the preprocessing writeup and the evaluation of model 1 with its writeup.
+* Rongrong (Cassy) Xu: Worked on the first draft of the abstract, combined notebooks and submitted data exploration, evaluated model 2 with its writeup, and participated in editing the final report.
+* Sol Jung: Proofread the abstract and final report, developed the initial models for model 1 and model 2, improved model 2, and helped write the related writeup for the models i.e. ARIMA and Logistic Regression, zoom calls with multiple team members.
+* Timothy Indrieri: Helped Program  Model 1 and Model 2, and helped write the related writeup for the models i.e. ARIMA and Logistic Regression, zoom calls with multiple team members.
+
 # 8. Final Model and Final Results Summary
-Include this in the last paragraph in D.
+Model 1: ARIMA Model
+The ARIMA (AutoRegressive Integrated Moving Average) model was utilized to forecast the number of verified product reviews, spanning from September 11, 1995, to August 31, 2015. For the initial phase, we focused on the year 2014 to predict trends for 2015. Our analysis centered on verified product reviews to determine patterns of increasing, decreasing, or stable review counts across different product categories.
+
+Results:
+The ARIMA model analyzed 12 months of 2014 data to predict 2015 review counts.
+The model identified subcategory media as having the highest number of purchases throughout the year.
+The Root Mean Squared Error (RMSE) for the ARIMA model predictions was 28,498.16, indicating a significant deviation from actual review counts.
+
+Model 2: Logistic Regression
+The logistic regression model aimed to predict product popularity based on review sentiments. This model leveraged the sentiment of review headlines, along with other features, to classify products as having high or low ratings. A star rating of three or more indicated a high rating.
+
+Results:
+An 80/20 train-test split was used to evaluate the model.
+The model achieved an accuracy and AUC score of approximately 0.73 on both training and testing datasets.
+The ROC AUC score of 0.72 suggests a moderate ability to discriminate between high and low-rated products, with a 72% chance of correctly ranking a randomly chosen positive instance over a negative one.
+
